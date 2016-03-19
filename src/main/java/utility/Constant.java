@@ -3,7 +3,7 @@ package utility;
 public class Constant {
 
 	public static String getURL(String env) {
-		final String qaURL = "10.92.41.174:8380/soma-webui/";
+		final String qaURL = "http://10.92.41.174:8380/soma-webui/";
 		final String intURL = "http://setup-int.guthy-renker.com/soma-webui/";
 		final String uatURL = "http://setup-uat.guthy-renker.com/soma-webui/";
 		env = env.toUpperCase();
@@ -11,7 +11,7 @@ public class Constant {
 			return qaURL;
 		} else if (env.equals("INT")) {
 			return intURL;
-		} else if (env.equals("INT")) {
+		} else if (env.equals("UAT")) {
 			return uatURL;
 		} else {
 			return null;
@@ -96,10 +96,8 @@ public class Constant {
 		public static final int Col_Intent = 8;
 		public static final int Col_StartDate = 9;
 		public static final int Col_EndDate = 10;
-		public static final int Col_UpperBase = 11;
-		public static final int Col_Standard = 12;
-		public static final int Col_Rush = 13;
-		public static final int Col_2Day = 14;
-		public static final int Col_SameDay = 15;
+		public static final int Col_NoOfShippingRange = 11;
+		public static final int Col_ShippingTableCode = 12;
+		public static final int Col_Status = 13;
 	}
 }

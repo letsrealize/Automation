@@ -14,7 +14,7 @@ public class Login_Action {
 		String password = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Password);
 		LoginPage.txtbx_UserName().sendKeys(userName);
 		LoginPage.txtbx_Password().sendKeys(password);
-		LoginPage.btn_Login().clear();
+		LoginPage.btn_Login().click();
 		Utils.waitForElement(HomePage.logo_GR());
 	}
 }

@@ -6,7 +6,8 @@
       <class name="testCases.TC1_CreateShippingTable">
         <methods>
           <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="afterMethod"/>
+          <include name="main"/>
         </methods>
       </class> <!-- testCases.TC1_CreateShippingTable -->
     </classes>

@@ -22,7 +22,7 @@ public class HomePage extends BaseClass {
 			try {
 				Utils.mouseHoverAction(mainElementRate, "Shipping Table", "New");
 			} catch (Exception e) {
-				Log.error("Accessories link is not found under Product Category");
+				Log.error("Shipping Table Navigation error");
 				throw (e);
 			}
 		}

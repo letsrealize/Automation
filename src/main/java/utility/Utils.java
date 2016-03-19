@@ -25,14 +25,15 @@ public class Utils {
 		try {
 			sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
 			sEnvironmentName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Env);
-			if (sBrowserName.equals("Mozilla")) {
+			if (sBrowserName.equals("Firefox")) {
 				FirefoxProfile prof = new FirefoxProfile();
 				prof.setPreference("browser.startup.homepage_override.mstone", "ignore");
 				prof.setPreference("startup.homepage_welcome_url.additional", "about:blank");
 				driver = new FirefoxDriver(prof);
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-				driver.get(Constant.getURL(sEnvironmentName));
+				String x = Constant.getURL(sEnvironmentName);
+				driver.get(x);
 			} else if (sBrowserName.equals("IE")) {
 				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\BrowserDrivers\\IEDriverServer32.exe");
 				driver = new InternetExplorerDriver();
