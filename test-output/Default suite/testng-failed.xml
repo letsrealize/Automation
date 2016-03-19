@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TC1_CreateShippingTable">
+      <class name="testCases.Temp">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="main"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- testCases.TC1_CreateShippingTable -->
+      </class> <!-- testCases.Temp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

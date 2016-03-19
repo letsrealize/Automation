@@ -9,6 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class GetRandoms {
 
 	public static class getDate {
@@ -29,6 +31,12 @@ public class GetRandoms {
 			String endDate = format.format(cal.getTime());
 			return endDate;
 		}
+	}
+	
+	public static String randomAlphanumeric(int howLong) {
+		String string = RandomStringUtils.random(64, false, true);
+		string = RandomStringUtils.random(howLong, 0, 36, true, true, "abcdefchijklmnopqrstuvwxyz1234567890".toCharArray());
+		return string;
 	}
 
 	public static String getNews() {

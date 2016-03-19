@@ -2,24 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44768" started-at="2016-03-19T20:40:51Z" finished-at="2016-03-19T20:41:36Z">
+  <suite name="Default suite" duration-ms="2614" started-at="2016-03-19T20:57:08Z" finished-at="2016-03-19T20:57:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44768" started-at="2016-03-19T20:40:51Z" finished-at="2016-03-19T20:41:36Z">
-      <class name="testCases.TC1_CreateShippingTable">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCases.TC1_CreateShippingTable@51e7c4d4]" name="beforeMethod" is-config="true" duration-ms="27472" started-at="2016-03-19T13:40:52Z" finished-at="2016-03-19T13:41:19Z">
+    <test name="Default test" duration-ms="2614" started-at="2016-03-19T20:57:08Z" finished-at="2016-03-19T20:57:10Z">
+      <class name="testCases.Temp">
+        <test-method status="PASS" signature="test()[pri:0, instance:testCases.Temp@1741055a]" name="test" duration-ms="2559" started-at="2016-03-19T13:57:08Z" finished-at="2016-03-19T13:57:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="main()[pri:0, instance:testCases.TC1_CreateShippingTable@51e7c4d4]" name="main" duration-ms="17179" started-at="2016-03-19T13:41:19Z" finished-at="2016-03-19T13:41:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- main -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases.TC1_CreateShippingTable@51e7c4d4]" name="afterMethod" is-config="true" duration-ms="65" started-at="2016-03-19T13:41:36Z" finished-at="2016-03-19T13:41:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- testCases.TC1_CreateShippingTable -->
+        </test-method> <!-- test -->
+      </class> <!-- testCases.Temp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
