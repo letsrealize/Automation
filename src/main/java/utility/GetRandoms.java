@@ -32,11 +32,24 @@ public class GetRandoms {
 			return endDate;
 		}
 	}
-	
+
 	public static String randomAlphanumeric(int howLong) {
 		String string = RandomStringUtils.random(64, false, true);
-		string = RandomStringUtils.random(howLong, 0, 36, true, true, "abcdefchijklmnopqrstuvwxyz1234567890".toCharArray());
+		string = RandomStringUtils.random(howLong, 0, 36, true, true,
+				"abcdefchijklmnopqrstuvwxyz1234567890".toCharArray());
 		return string;
+	}
+
+	public static int randomNumbers(int min, int max) {
+		Random rand = new Random();
+		int randomNum = rand.nextInt((max - min) + 1) + min;
+		return randomNum;
+	}
+
+	public static String randomNumbersString(int min, int max) {
+		Random rand = new Random();
+		int randomNum = rand.nextInt((max - min) + 1) + min;
+		return Integer.toString(randomNum);
 	}
 
 	public static String getNews() {

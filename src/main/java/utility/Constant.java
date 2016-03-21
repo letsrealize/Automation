@@ -98,6 +98,5 @@ public class Constant {
 		public static final int Col_EndDate = 10;
 		public static final int Col_NoOfShippingRange = 11;
 		public static final int Col_ShippingTableCode = 12;
-		public static final int Col_Status = 13;
 	}
 }

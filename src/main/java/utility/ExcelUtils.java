@@ -37,6 +37,7 @@ public class ExcelUtils {
 			String CellData = null;
 			if (Cell != null)
 			{
+			Cell.setCellType(Cell.CELL_TYPE_STRING);
 			CellData = Cell.getStringCellValue();
 			}
 			return CellData;
@@ -51,11 +52,13 @@ public class ExcelUtils {
 	public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
 		try {
 			Row = ExcelWSheet.getRow(RowNum);
-			Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
+			Cell = Row.getCell(ColNum);
 			if (Cell == null) {
 				Cell = Row.createCell(ColNum);
+				Cell.setCellType(Cell.CELL_TYPE_STRING);
 				Cell.setCellValue(Result);
 			} else {
+				Cell.setCellType(Cell.CELL_TYPE_STRING);
 				Cell.setCellValue(Result);
 			}
 			// Constant variables Test Data path and Test Data file name
@@ -96,5 +99,6 @@ public class ExcelUtils {
 		}
 
 	}
+	
 
 }

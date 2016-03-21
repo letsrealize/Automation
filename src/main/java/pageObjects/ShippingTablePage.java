@@ -36,12 +36,12 @@ public class ShippingTablePage extends BaseClass {
 	}
 
 	public static WebElement dateTxt_startDate() {
-		element = driver.findElement(By.id("date_startDateInput"));
+		element = driver.findElement(By.id("startDateInput"));
 		return element;
 	}
 
 	public static WebElement dateTxt_endDate() {
-		element = driver.findElement(By.id("date_endDateInput"));
+		element = driver.findElement(By.id("endDateInput"));
 		return element;
 	}
 
@@ -90,4 +90,9 @@ public class ShippingTablePage extends BaseClass {
 		return element;
 	}
 
+	public static WebElement shippingTableCode() throws Exception {
+		element = driver.findElement(By.id("shippingTableCode"));
+		return element;
+	}
+	
 }

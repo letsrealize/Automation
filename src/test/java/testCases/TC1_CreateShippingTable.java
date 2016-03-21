@@ -6,8 +6,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import appModules.CreateShippingTable_Action;
 import appModules.Login_Action;
 import pageObjects.BaseClass;
+import pageObjects.HomePage;
 import utility.Constant;
 import utility.ExcelUtils;
 import utility.Log;
@@ -33,12 +35,15 @@ public class TC1_CreateShippingTable {
 	public void main() throws Exception {
 		try {
 			Login_Action.Execute(iTestCaseRow);
-			// ExcelUtils.setCellData(BaseClass.shippingTableCode,
-			// iTestCaseRow,Constant.shippingTableData.Col_ShippingTableCode);
-			ExcelUtils.setCellData("Pass", iTestCaseRow, Constant.shippingTableData.Col_Status);
-		} catch (Exception e) {
-			ExcelUtils.setCellData("Fail", iTestCaseRow, Constant.shippingTableData.Col_Status);
+			HomePage.TopNavigation.NewShippingTable();
+			CreateShippingTable_Action.Execute(iTestCaseRow);
 			Utils.takeScreenshot(driver, sTestCaseName);
+			ExcelUtils.setCellData(BaseClass.shippingTableCode, iTestCaseRow,
+					Constant.shippingTableData.Col_ShippingTableCode);
+		} catch (Exception e) {
+			Utils.takeScreenshot(driver, sTestCaseName);
+			ExcelUtils.setCellData("ERROR-Please check the log file.", iTestCaseRow,
+					Constant.shippingTableData.Col_ShippingTableCode);
 			Log.error(e.getMessage());
 			throw (e);
 		}
